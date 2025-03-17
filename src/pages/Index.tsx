@@ -8,6 +8,7 @@ import Projects from '@/components/Projects';
 import Background from '@/components/Background';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import Web3Background from '@/components/Web3Background';
 
 const Index: React.FC = () => {
   // Add a subtle scroll reveal effect
@@ -32,6 +33,7 @@ const Index: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground antialiased">
+      <Web3Background />
       <Navbar />
       <Hero />
       <Journey />

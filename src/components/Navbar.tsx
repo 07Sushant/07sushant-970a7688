@@ -1,6 +1,8 @@
 
 import React, { useEffect, useState } from 'react';
 import { cn } from "@/lib/utils";
+import { FileDown } from 'lucide-react';
+import { Button } from './ui/button';
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -35,7 +37,7 @@ const Navbar: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center">
-          <span className="text-xl font-bold text-gradient">DS.</span>
+          <span className="text-xl font-bold text-gradient">Sushant <span className="font-sans">कुमार</span></span>
         </div>
 
         {/* Desktop Menu */}
@@ -49,6 +51,15 @@ const Navbar: React.FC = () => {
               {item}
             </button>
           ))}
+          <Button 
+            onClick={() => window.open('/resume.pdf', '_blank')}
+            variant="outline" 
+            size="sm"
+            className="flex items-center gap-2 border-primary text-primary hover:bg-primary/10 hover:text-primary"
+          >
+            <FileDown className="h-4 w-4" />
+            Resume
+          </Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -96,6 +107,15 @@ const Navbar: React.FC = () => {
               {item}
             </button>
           ))}
+          <Button 
+            onClick={() => window.open('/resume.pdf', '_blank')}
+            variant="outline" 
+            size="sm"
+            className="flex items-center gap-2 border-primary text-primary hover:bg-primary/10 hover:text-primary"
+          >
+            <FileDown className="h-4 w-4" />
+            Resume
+          </Button>
         </div>
       </div>
     </nav>
